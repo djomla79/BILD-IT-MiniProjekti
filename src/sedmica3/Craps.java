@@ -13,6 +13,7 @@ public class Craps {
 		 Continue to roll the dice until either a 7 or the same point value is rolled.
 		 If 7 is rolled, you lose. Otherwise, you win.
 		 */
+		
 		int dice1 = (int)(Math.random()*6+1);
 		int dice2 = (int)(Math.random()*6+1);
 		
@@ -86,8 +87,8 @@ public class Craps {
 	/** Metoda koja prima dva argumenta, integera i vraca njihovu sumu */
 	public static int bacanje(int dice1, int dice2) {
 		
-		int suma = dice1 + dice2;  // suma dva unesena integera
+		int suma = dice1 + dice2; // suma dva unesena integera
 		
-		return suma;               // vracanje sume
+		return suma;              // vracanje sume
 	}
 }
