@@ -25,6 +25,7 @@ public class TicTacToe {
 		
 		/* Pozivanje metode
 		 * za biranje i start igre */
+		System.out.println("///// 'X' | 'O' /////\n");
 		biranjeIgre();
 		
 	}
@@ -32,7 +33,8 @@ public class TicTacToe {
 	 * da li igra sa 'X' ili sa 'O' */
 	public static void biranjeIgre() {
 		
-		System.out.print("Izaberi igru sa 'X' ili sa 'O': ");
+		System.out.println("---Izaberite igru---");
+		System.out.print("Unesite 'X' ili 'O': ");
 		
 		input = new Scanner(System.in);
 		char i = input.next().charAt(0);
@@ -53,7 +55,7 @@ public class TicTacToe {
 		/* Kreiranje objekta Igrac
 		 * sa parametrom char zamjena */
 		Igrac drugi = new Igrac(zamjena);
-		System.out.println("Igrac 1, ti si: '" + prvi.igrac + "'");
+		System.out.println("\nIgrac 1, ti si: '" + prvi.igrac + "'");
 		System.out.println("Igrac 2, ti si: '" + drugi.igrac + "'");
 		
 		/* Ako objekat vrijednosti char odgovara uslovu
@@ -145,10 +147,10 @@ public class TicTacToe {
 		
 		input = new Scanner(System.in);
 		
-		System.out.print("Igrac 'X', unos broja reda (0, 1, or 2): ");
+		System.out.print("Igrac 'X', unesite broj reda (0, 1, or 2): ");
 		int red = input.nextInt();    // unos reda matrice
 		
-		System.out.print("Igrac 'X', unos broja kolone (0, 1, or 2): ");
+		System.out.print("Igrac 'X', unesite broj kolone (0, 1, or 2): ");
 		int kolona = input.nextInt(); // unos kolone matrice
 		brojac++;                     // brojac poteza
 		
@@ -160,10 +162,10 @@ public class TicTacToe {
 					while(tabela[red][kolona] == 'X' || tabela[red][kolona] == 'O') {
 						
 						System.out.println("Polje je zauzeto. Pokusajte ponovo.");
-						System.out.print("Igrac 'X', unos broja reda (0, 1, or 2): ");
+						System.out.print("Igrac 'X', unesite broj reda (0, 1, or 2): ");
 						red = input.nextInt();
 						
-						System.out.print("Igrac 'X', unos broja kolone (0, 1, or 2): ");
+						System.out.print("Igrac 'X', unesite broj kolone (0, 1, or 2): ");
 						kolona = input.nextInt();
 					}
 					/* i ako pozicija u matrici nije zauzeta
@@ -181,10 +183,10 @@ public class TicTacToe {
 		
 		input = new Scanner(System.in);
 		
-		System.out.print("Igrac 'O', unos broja reda (0, 1, or 2): ");
+		System.out.print("Igrac 'O', unesite broj reda (0, 1, or 2): ");
 		int red = input.nextInt();    // unos reda matrice
 		
-		System.out.print("Igrac 'O', unos broja kolone (0, 1, or 2): ");
+		System.out.print("Igrac 'O', unesite broj kolone (0, 1, or 2): ");
 		int kolona = input.nextInt(); // unos kolone matrice
 		brojac++;                     // brojac poteza
 		
@@ -196,10 +198,10 @@ public class TicTacToe {
 					while(tabela[red][kolona] == 'X' || tabela[red][kolona] == 'O') {
 						
 						System.out.println("Polje je zauzeto. Pokusajte ponovo.");
-						System.out.print("Igrac 'O', unos broja reda (0, 1, or 2): ");
+						System.out.print("Igrac 'O', unesite broj reda (0, 1, or 2): ");
 						red = input.nextInt();
 						
-						System.out.print("Igrac 'O', unos broja kolone (0, 1, or 2): ");
+						System.out.print("Igrac 'O', unesite broj kolone (0, 1, or 2): ");
 						kolona = input.nextInt();
 					}
 					/* i ako pozicija u matrici nije zauzeta
