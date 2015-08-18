@@ -255,19 +255,18 @@ public class ConnectFour {
 				}
 			}
 		}
-		
-		for(int i=0; i<3; i++) {
-			for(int j=0; j<4; j++) {
-				if (tabela[i][j] == 'R' && tabela[i+1][j+1] == 'R' && tabela[i+2][j+2] == 'R' && tabela[i+3][j+3] == 'R' || 
-					tabela[i][j] == 'Y' && tabela[i+1][j+1] == 'Y' && tabela[i+2][j+2] == 'Y' && tabela[i+3][j+3] == 'Y') {
+		for(int i=0; i<4; i++) {
+			for (int j=5; j>= 3; j--) {
+				if (tabela[j][i] == 'R' && tabela[j-1][i+1] == 'R' && tabela[j-2][i+2] == 'R' && tabela[j-3][i+3] == 'R' ||
+					tabela[j][i] == 'Y' && tabela[j-1][i+1] == 'Y' && tabela[j-2][i+2] == 'Y' && tabela[j-3][i+3] == 'Y') {
 					pobjeda = true;
 				}
 			}
 		}
-		for(int i=3; i<6; i++) {
-			for(int j=0; j<4; j++) {
-				if (tabela[i][j] == 'R' && tabela[i-1][j+1] == 'R' && tabela[i-2][j+2] == 'R' && tabela[i-3][j+3] == 'R' || 
-					tabela[i][j] == 'Y' && tabela[i-1][j+1] == 'Y' && tabela[i-2][j+2] == 'Y' && tabela[i-3][j+3] == 'Y') {
+		for (int i=5; i>=3; i--) {
+			for (int j=5; j>=3; j--) {
+				if(tabela[j][i] == 'R' && tabela[j-1][i-1] == 'R' && tabela[j-2][i-2] == 'R' && tabela[j-3][i-3] == 'R' || 
+				   tabela[j][i] == 'Y' && tabela[j-1][i-1] == 'Y' && tabela[j-2][i-2] == 'Y' && tabela[j-3][i-3] == 'Y') {
 					pobjeda = true;
 				}
 			}
