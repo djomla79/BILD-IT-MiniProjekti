@@ -35,34 +35,34 @@ public class TicTacToe {
 		System.out.print("Izaberi igru sa 'X' ili sa 'O': ");
 		
 		input = new Scanner(System.in);
-		char ch = input.next().charAt(0);
+		char i = input.next().charAt(0);
 		
-		/* Kreiranje objekta Player sa parametrom ch */
-		Player one = new Player(ch);   
-		char temp = 0;
+		/* Kreiranje objekta Igrac sa parametrom i */
+		Igrac prvi = new Igrac(i);   
+		char zamjena = 0;
 		/* ako objekat vrijednosti char odgovara
-		 * uslovu, karakter temp postaje 'X' */
-		if(one.letter == 'O') {
-			temp = 'X';
-		} else if(one.letter == 'X') {
-			temp = 'O';
+		 * uslovu, karakter zamjena postaje 'X' */
+		if(prvi.igrac == 'O') {
+			zamjena = 'X';
+		} else if(prvi.igrac == 'X') {
+			zamjena = 'O';
 		} else {
 			System.out.println("Pogresan unos!\n");
 			biranjeIgre();
 		}
-		/* Kreiranje objekta Player
-		 * sa parametrom char temp */
-		Player two = new Player(temp);
-		System.out.println("Igrac 1, ti si: '" + one.letter + "'");
-		System.out.println("Igrac 2, ti si: '" + two.letter + "'");
+		/* Kreiranje objekta Igrac
+		 * sa parametrom char zamjena */
+		Igrac drugi = new Igrac(zamjena);
+		System.out.println("Igrac 1, ti si: '" + prvi.igrac + "'");
+		System.out.println("Igrac 2, ti si: '" + drugi.igrac + "'");
 		
 		/* Ako objekat vrijednosti char odgovara uslovu
 		 * poziva se metoda za start igre sa igracem 'X' ili 'O' */
-		if(one.letter == 'X') {
+		if(prvi.igrac == 'X') {
 			System.out.println();
 			startIgreX();
 		}
-		if(one.letter == 'O') {
+		if(prvi.igrac == 'O') {
 			System.out.println();
 			startIgreO();
 		} 
@@ -137,6 +137,7 @@ public class TicTacToe {
 			}
 			
 		} while(isOn);                // petlja radi dok se uslov ne ispuni
+		
 	}
 
 	/** Metoda igraca 'X' */
@@ -253,20 +254,20 @@ public class TicTacToe {
 		System.out.println();
 		
 	}
-	/** Klasa Player */
-	static class Player {
+	/** Klasa Igrac */
+	static class Igrac {
 		
-		public char letter;
+		public char igrac;
 		/** Konstruktor Player sa parametrom char */
-		Player(char c) {
+		Igrac(char i) {
 			/* Ako parametar char odgovara uslovu,
 			 * karakter je X ili O, a ako ne karakter je 0 */
-			if(Character.toUpperCase(c) == 'X') {
-				this.letter = 'X';
-			} else if(Character.toUpperCase(c) == 'O') {
-				this.letter = 'O';
+			if(Character.toUpperCase(i) == 'X') {
+				this.igrac = 'X';
+			} else if(Character.toUpperCase(i) == 'O') {
+				this.igrac = 'O';
 			} else {
-				this.letter = 0;
+				this.igrac = 0;
 			}
 		}
 	}
