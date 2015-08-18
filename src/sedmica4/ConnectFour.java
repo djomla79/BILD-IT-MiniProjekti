@@ -91,7 +91,7 @@ public class ConnectFour {
 				isOn = false;
 				System.exit(1);
 			}
-			/* ako je ukupan broj poteza 9, igra nema pobjednika */
+			/* ako je ukupan broj poteza 42, igra nema pobjednika */
 			if(brojac == 42) {
 				System.out.println("Nerijeseno!");
 				isOn = false;
@@ -125,7 +125,7 @@ public class ConnectFour {
 				isOn = false;
 				System.exit(1);
 			}
-			/* ako je ukupan broj poteza 9, igra nema pobjednika */
+			/* ako je ukupan broj poteza 42, igra nema pobjednika */
 			if(brojac == 42) {
 				System.out.println("Nerijeseno!");
 				isOn = false;
@@ -148,7 +148,7 @@ public class ConnectFour {
 		while(isOn) {                         // petlja radi dok se uslov ne ispuni
 			for(int i=0; i<6; i++) {
 				/* Ako u tabeli sa unesenom kolonom nema karaktera 'R' i 'Y'
-				 * na tu poziciju unesi karakter 'R', i tako za sve uslove*/
+				 * na tu poziciju unesi karakter 'R', i tako za sve uslove */
 				if(tabela[5][kolona] != 'R' && tabela[5][kolona] != 'Y') {
 					tabela[5][kolona] = 'R';
 					isOn = false;
@@ -197,7 +197,7 @@ public class ConnectFour {
 		while(isOn) {
 			for(int i=0; i<6; i++) {
 				/* Ako u tabeli sa unesenom kolonom nema karaktera 'R' i 'Y'
-				 * na tu poziciju unesi karakter 'Y', i tako za sve uslove*/
+				 * na tu poziciju unesi karakter 'Y', i tako za sve uslove */
 				if(tabela[5][kolona] != 'R' && tabela[5][kolona] != 'Y') {
 					tabela[5][kolona] = 'Y';
 					isOn = false;
