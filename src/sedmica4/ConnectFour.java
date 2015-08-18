@@ -151,7 +151,7 @@ public class ConnectFour {
 				 * na tu poziciju unesi karakter 'R', i tako za sve uslove */
 				if(tabela[5][kolona] != 'R' && tabela[5][kolona] != 'Y') {
 					tabela[5][kolona] = 'R';
-					isOn = false;
+					isOn = false;             // uslov je ispunjen, prekid rada petlje, itd za sve uslove
 					break;
 				}
 				if(tabela[4][kolona] != 'R' && tabela[4][kolona] != 'Y') {
@@ -200,7 +200,7 @@ public class ConnectFour {
 				 * na tu poziciju unesi karakter 'Y', i tako za sve uslove */
 				if(tabela[5][kolona] != 'R' && tabela[5][kolona] != 'Y') {
 					tabela[5][kolona] = 'Y';
-					isOn = false;
+					isOn = false;             // uslov je ispunjen, prekid rada petlje, itd za sve uslove
 					break;
 				}
 				if(tabela[4][kolona] != 'R' && tabela[4][kolona] != 'Y') {
@@ -263,7 +263,7 @@ public class ConnectFour {
 				}
 			}
 		}
-		for (int i=5; i>=3; i--) {
+		for(int i=5; i>=3; i--) {
 			for (int j=5; j>=3; j--) {
 				if(tabela[j][i] == 'R' && tabela[j-1][i-1] == 'R' && tabela[j-2][i-2] == 'R' && tabela[j-3][i-3] == 'R' || 
 				   tabela[j][i] == 'Y' && tabela[j-1][i-1] == 'Y' && tabela[j-2][i-2] == 'Y' && tabela[j-3][i-3] == 'Y') {
